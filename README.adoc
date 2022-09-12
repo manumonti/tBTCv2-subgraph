@@ -1,0 +1,34 @@
+:toc: macro
+
+= Threshold Network subgraph
+
+This repository contains tBTCv2 subgraph.
+
+Subgraphs are open APIs to query data from networks like Ethereum and IPFS. The
+data is indexed by https://thegraph.com[*The Graph*] decentralized protocol.
+
+toc::[]
+
+== Install, build and deploy subgraph
+
+=== Contributing
+
+==== Lint
+
+We use https://prettier.io[Prettier] and https://eslint.org[ESLint] for linting
+code. The scripts are:
+
+```
+$ yarn format <file_path>           # Prettier
+$ yarn format:fix <file_path>
+$ yarn lint # eslint <file_path>    # ESLint
+$ yarn lint:fix <file_path>
+$ yarn format:lint:fix <file_path>  # fix files using Prettier and ESLint
+```
+
+We encourage to use Git hooks to check code style. To install Git hooks, run:
+
+```
+$ yarn husky install
+```
+
