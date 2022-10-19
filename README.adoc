@@ -11,6 +11,28 @@ toc::[]
 
 == Install, build and deploy subgraph
 
+=== Testing subgraph locally
+
+This tBTCv2 subgraph can be deployed in a local Graph node for developing and testing purposes.
+
+After deploying https://github.com/keep-network/tbtc-v2[tBTCv2 contracts] in a local blockchain
+using Hardhat or Ganache, we can deploy the local Graph node, connect it to this local blockchain
+and deploy on it tBTCv2 subgraph.
+
+Deploy local subgraph node on Docker containers
+
+```
+$ docker-compose up
+```
+
+Deploy the subgraph
+
+```
+$ graph codegen && graph build
+$ yarn create-local
+$ yarn deploy-local
+```
+
 === Contributing
 
 ==== Lint
