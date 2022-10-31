@@ -1,0 +1,23 @@
+specVersion: 0.0.4
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Bridge
+    network: mainnet
+    source:
+      address: "0xDDEec1224034F4A68A2697eF13379a014fa60261"
+      abi: Bridge
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+      abis:
+        - name: Bridge
+          file: ./abis/Bridge.json
+      eventHandlers:
+        - event: DepositRevealed(bytes32,uint32,indexed address,uint64,bytes8,indexed bytes20,bytes20,bytes4,address)
+          handler: handleDepositRevealed
+      file: ./src/bridge.ts
