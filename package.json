@@ -2,6 +2,7 @@
   "name": "tBTCv2-subgraph",
   "license": "GPL-3.0-or-later",
   "scripts": {
+    "prepare": "yarn husky install",
     "lint": "eslint --ignore-path .linterignore",
     "lint:fix": "yarn lint --fix",
     "prettier": "prettier --ignore-path .linterignore",
